@@ -3,6 +3,8 @@
 import { WebSocketServer, WebSocket } from "ws";
 
 const wss = new WebSocketServer({ port: 3000 });
+console.log('wss is running on "ws://localhost:3000"');
+
 const clients = new Set<WebSocket>(); // This stores all connected sockets
 
 wss.on("connection", (socket) => {

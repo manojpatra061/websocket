@@ -4,6 +4,7 @@ import { WebSocketServer } from "ws";
 
 // Create a new WebSocket server listening on port 8080
 const wss = new WebSocketServer({ port: 8080 });
+console.log('wss is running on "ws://localhost:8080"');
 
 // Listen for new client connections
 wss.on("connection", function (ws) {
@@ -23,5 +24,3 @@ wss.on("connection", function (ws) {
     console.log("client disconnected...");
   });
 });
-
-console.log('wss is running on "ws://localhost:8080"');
